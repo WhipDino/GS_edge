@@ -1,6 +1,23 @@
-# Dispensador Automático de Medicamentos IoT
+# Bracelete Inteligente para Gerenciamento de Medicamentos
 
-Este repositório contém o código e a documentação para um projeto de Dispensador Automático de Medicamentos que simula um bracelete controlado por IoT. O dispositivo usa um ESP32 para controlar um servomotor que libera medicamentos em intervalos programados. A comunicação é feita via MQTT, permitindo que o dispositivo receba comandos e envie atualizações de status. Além disso, o projeto integra o Node-RED para encaminhar notificações para o WhatsApp.
+### O projeto wokwi está na pasta arduino e o video está na pasta video.
+
+## Descrição do Problema
+
+A adesão ao tratamento medicamentoso é um aspecto crítico da gestão da saúde, especialmente para indivíduos com condições crônicas que requerem medicação regular. O esquecimento de tomar medicamentos no horário correto ou a perda de doses pode levar a resultados de saúde subótimos e complicações adicionais. A necessidade de uma solução discreta e conveniente que possa auxiliar os usuários a manterem a regularidade de sua medicação é evidente.
+
+## Visão Geral da Solução
+
+Este projeto visa desenvolver um bracelete inteligente que funcione como um dispensador de medicamentos portátil e lembrete para o usuário. O bracelete contém compartimentos para armazenar doses individuais de medicamentos e é equipado com um mecanismo de alerta que notifica o usuário quando é hora de tomar o medicamento. Com esta solução, os usuários terão um método mais fácil e confiável para gerenciar sua medicação, melhorando a adesão ao tratamento e promovendo melhores resultados de saúde.
+
+O bracelete será projetado para ser confortável e esteticamente agradável, incentivando o uso contínuo e discreto. A funcionalidade inteligente do bracelete é alcançada através da integração com tecnologia IoT, permitindo que ele se comunique com um aplicativo móvel para rastreamento e gerenciamento de adesão à medicação.
+
+### Características Principais
+
+- Compartimentos seguros e discretos para armazenamento de medicamentos.
+- Alertas vibratórios e visuais para lembretes de medicação.
+- Conectividade com aplicativo móvel para acompanhamento de adesão e ajustes de programação.
+- Design ergonômico e personalizável para atender a diferentes preferências de usuários.
 
 ## Recursos
 
