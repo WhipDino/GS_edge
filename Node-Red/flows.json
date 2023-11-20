@@ -1,0 +1,121 @@
+[
+    {
+        "id": "52c1285a3261b9d1",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "78fd13d4645ff77b",
+        "type": "node-red-contrib-whatsapp-cmb-send-message",
+        "z": "52c1285a3261b9d1",
+        "name": "",
+        "credtype": "account",
+        "account": "a2c3fbebde82c858",
+        "text": "payload",
+        "phonenumbervalue": "",
+        "apikeyvalue": "",
+        "apikeyinputtypemessage": "msg",
+        "phonenumberinputtypemessage": "msg",
+        "inputtypemessage": "msg",
+        "rejectssl": false,
+        "x": 1020,
+        "y": 160,
+        "wires": [
+            [
+                "6fd4e7316941801b"
+            ]
+        ]
+    },
+    {
+        "id": "dccc13554aff02dd",
+        "type": "mqtt in",
+        "z": "52c1285a3261b9d1",
+        "name": "",
+        "topic": "fiap/iot/dispenser",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "53163c7b332d7c91",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 380,
+        "y": 200,
+        "wires": [
+            [
+                "d1ca8faab63303f0"
+            ]
+        ]
+    },
+    {
+        "id": "d1ca8faab63303f0",
+        "type": "function",
+        "z": "52c1285a3261b9d1",
+        "name": "function 1",
+        "func": "msg.payload = \"Alerta: \" + msg.payload;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 200,
+        "wires": [
+            [
+                "78fd13d4645ff77b",
+                "6fd4e7316941801b"
+            ]
+        ]
+    },
+    {
+        "id": "6fd4e7316941801b",
+        "type": "debug",
+        "z": "52c1285a3261b9d1",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "a2c3fbebde82c858",
+        "type": "node-red-contrib-whatsapp-cmb-account",
+        "name": "João"
+    },
+    {
+        "id": "53163c7b332d7c91",
+        "type": "mqtt-broker",
+        "name": "HiveMQ",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "Joao_mqtt",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]

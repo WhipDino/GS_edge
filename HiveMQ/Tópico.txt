@@ -1,0 +1,2 @@
+Caso deseje acessar o tópico utilizado:
+fiap/iot/dispenser
